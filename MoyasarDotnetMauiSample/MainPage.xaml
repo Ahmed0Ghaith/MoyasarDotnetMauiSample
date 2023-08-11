@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MoyasarDotnetMauiSample.MainPage">
+
+    <Grid  HorizontalOptions="FillAndExpand" RowDefinitions="*,50">
+        <StackLayout>
+            <WebView
+                x:Name="PaymentWebView"
+                Navigating="PaymentWebView_Navigating"
+                HorizontalOptions="FillAndExpand"
+                PropertyChanged="PaymentWebView_PropertyChanged"
+                Source="https://github.com/"
+                VerticalOptions="FillAndExpand" />
+        </StackLayout>
+        <StackLayout Grid.Row="1" Orientation="Horizontal">
+            <Button
+                x:Name="CreditCard"
+                Clicked="CreditCard_Clicked"
+                HorizontalOptions="FillAndExpand"
+                Text="Credit Card" />
+            <Button
+                x:Name="ApplePay"
+                Clicked="ApplePay_Clicked"
+                HorizontalOptions="FillAndExpand"
+                Text="ApplePay" />
+        </StackLayout>
+
+    </Grid>
+
+</ContentPage>
